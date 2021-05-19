@@ -10,6 +10,7 @@ import Map from '../../miscelleous/Map';
 import Footer from '../../navigation/footer/footer';
 
 let back = <Brand />;
+let index = 0;
 class section1 extends Component {
     state = {
         cls1: "circle",
@@ -18,7 +19,11 @@ class section1 extends Component {
         brand: false
     }
     componentDidMount() {
-        setTimeout(() => this.clickBtn(2), 1500);
+        setInterval(() => {
+            index = index == 3 ? 1 : index + 1;
+            this.clickBtn(index);
+        }, 5000);
+        // setTimeout(() => this.clickBtn(1), 1500);
     }
 
     clickBtn(valv) {
@@ -30,13 +35,15 @@ class section1 extends Component {
             this.setState({ cls1: "full" });
         }
         else if (valv === 2) {
-            back = <Brand hide />;
+            back = <></>;
 
             this.setState({ cls3: "circle" });
             this.setState({ cls1: "circle" });
             this.setState({ cls2: "full" });
         }
         else if (valv === 3) {
+            back = <></>;
+            
             this.setState({ cls1: "circle" });
             this.setState({ cls2: "circle" });
             this.setState({ cls3: "full" });
@@ -75,10 +82,10 @@ class section1 extends Component {
                     <Map />
                 </section>
                 <Footer />
-                <section>
-        <div style={{width:" 100%"}}>
-        <iframe src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Malet%20St%2C%20London%20WC1E%207HU%2C%20United%20Kingdom+(Your%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style={{height:"50vh",width:"100vw"}}><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create a custom Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div><br />
-        </section>
+                {/* <section>
+                    <div style={{ width: " 100%" }}>
+                        <iframe src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Malet%20St%2C%20London%20WC1E%207HU%2C%20United%20Kingdom+(Your%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style={{ height: "50vh", width: "100vw" }}><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create a custom Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div><br />
+                </section> */}
             </div>
         );
     }

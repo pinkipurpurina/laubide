@@ -61,13 +61,13 @@
 }
 @media screen and (max-width:1170px){
     .Header{
-        background-size: contain;
+        /* background-size: contain; */
         background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url("./vlad-img.jpg");
     }
 } 
 @media screen and (max-width:700px){
     .Header{
-        background-size: contain;
+        /* background-size: contain; */
         background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url("./vlad.jpg");
     }
 } 

@@ -19,3 +19,4 @@ Route::get('platos/{plato}', 'App\Http\Controllers\PlatosController@show');
 Route::post('platos', 'App\Http\Controllers\PlatosController@store');
 Route::put('platos/{plato}', 'App\Http\Controllers\PlatosController@update');
 Route::delete('platos/{plato}', 'App\Http\Controllers\PlatosController@delete');
+Route::get('platos/categoria/{categoria}', 'App\Http\Controllers\PlatosController@allByCategoria');

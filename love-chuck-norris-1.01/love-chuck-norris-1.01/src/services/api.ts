@@ -3,7 +3,7 @@ const requestHelper = axios.create({
     baseURL: 'https://api.chucknorris.io/jokes'
 });
 const requestHelperLocal = axios.create({
-    baseURL: 'http://localhost:4000'
+    baseURL: 'http://localhost:8000/api/'
 });
 
 export default {
@@ -36,10 +36,16 @@ export default {
         })
     },
     categorias: {
-        get: () => requestHelper({
-            url: 'categories',
+        get: (categoria : string) => requestHelperLocal({
+            url: 'platos/categoria/'+ categoria,
             method: 'get',
         })
     },
+    platos: {
+        get: () => requestHelperLocal({
+            url: 'platos',
+            method: 'get',
+        })
+    }
 
 }

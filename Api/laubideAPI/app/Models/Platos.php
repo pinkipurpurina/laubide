@@ -20,4 +20,9 @@ class Platos extends Model
         'etiquetas',
         'imagen'
     ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
 }

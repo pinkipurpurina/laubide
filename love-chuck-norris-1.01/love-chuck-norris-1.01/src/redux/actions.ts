@@ -9,18 +9,32 @@ export const getFrasesSuccess = createAction('getFrasesSuccess');
 export const createFraseSuccess = createAction('createFraseSuccess');
 export const setFraseSuccess = createAction('setFraseSuccess');
 export const getFraseSuccess = createAction('getFraseSuccess');
+// A partir de aqui las de ahora
+export const setSection = createAction('setSection');
+export const getSection = createAction('getSection');
+export const setPlatosSuccess = createAction('setPlatosSuccess');
+export const getPlatosSuccess = createAction('getPlatosSuccess');
 
 //de la api las categorías
-export const getCategorias = () => async (dispatch: any) => {
+export const getPlatos = (categoria = '') => async (dispatch: any) => {
+  
     try {
-        const response = await api.categorias.get();
-        dispatch(getCategoriasSuccess(response.data))
+        if(categoria ==''){
+            const response = await api.platos.get();
+            dispatch(getPlatosSuccess(response.data))
+        }
+        else{
+            const response = await api.categorias.get(categoria);
+            dispatch(getPlatosSuccess(response.data))
+        }
+        
     } catch (e) {
         dispatch(handleApiError(e))
     }
 }
+
 //de la api random y con categoría
-export const getFrase = (categoria="") => async (dispatch: any) => {
+export const getFrase= (categoria="") => async (dispatch: any) => {
     try {
         const response = await api.frase.get(categoria);  
 
