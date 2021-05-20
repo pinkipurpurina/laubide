@@ -1,0 +1,26 @@
+#item1, 
+#item2, 
+#item3{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: #8a734a86;
+  /* #463b269d; */
+  background-blend-mode:luminosity;
+}
+#item1{
+  background-image: url('./../../Assests/images/img-carousel/pintxosbarra.JPG');
+
+}
+#item2{
+  background-image: url('./../../Assests/images/img-carousel/desayuno.JPG');
+
+}
+#item3{
+  background-image: url('./../../Assests/images/img-carousel/caneros.JPG');
+
+}

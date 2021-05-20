@@ -1,0 +1,65 @@
+:root {
+    --primary-color : #ff652f;
+    --secondary-color : #14A76C;
+    --tertiary-color : #242424;
+  }
+.flex-container {
+    margin-top: 3em ;
+    margin-bottom: 3em ;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .flex-item {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 1 1 33%;
+    
+    text-align: center;
+    /* max-width: 33%; */
+  }
+  .flex-item h1{
+      color: var(--primary-color);
+  }
+  .flex-item h2{
+    color:  var(--secondary-color);
+}
+.box img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+  .card-item{
+      color: white;
+     background-color: var(--tertiary-color);
+     height: 100%;
+     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .card-item p{
+    color: white;
+   background-color: var(--tertiary-color);
+   font-size: 0.8em;
+}
+  .filtros{
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    
+  }
+  .filtros Button{
+    width: 20%;
+  }

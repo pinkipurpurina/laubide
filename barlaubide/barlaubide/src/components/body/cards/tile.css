@@ -1,0 +1,91 @@
+.tile{
+    height:270px;
+    width:auto;
+    margin-top:30px;
+    min-width:200px;
+    padding:20px 10px;
+    display: inline-block;
+  
+    color:#fff;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s ease;
+}
+.nd1{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../../Assests/images/stacked/cumple.jpg"); 
+}
+.tilescontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+ .nd2{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../../Assests/images/stacked/pedidos.jpg");
+}
+.nd3{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../../Assests/images/stacked/cafe.jpg");
+}
+.tile:hover{
+    margin-top:0px;
+    box-shadow: 0 20px 20px #747474;
+}
+.titleHead{
+    padding-top:1.5em;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size:140%;
+}
+.titleContent{
+    text-transform: capitalize;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: 120%;
+    font-weight: 400;
+}
+.titleButton{
+    margin-top:0px;
+    float: right;
+    padding-right: 10px;
+}
+.grab{
+    height:50px;
+    width:auto;
+    border-radius: 200px;
+    border:1px solid #ff652f;
+    padding:10px 25px;
+    text-align: center;
+    background-color: #ff652f;
+    display: inline-block;
+    transition: all 0.4s ease;
+    cursor:pointer;
+}
+.grab a{
+    color:#fff;
+    text-decoration:none;
+}
+.grab p{
+    color:#fff;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 110%;
+}
+.grab:hover{
+    background-color:#d93800 !important;
+    border:1px solid #d93800 !important;
+    box-shadow: 0 0 0 0.45rem rgb(43 172 117 / 66%);
+}
+.grab:active,.grab:focus{
+    background-color:#d93800 !important;
+    border:1px solid #d93800 !important;
+    box-shadow: 0 0 0 0.15rem rgb(43 172 117 / 66%);
+    
+}
+@media screen and (max-width:1170px){
+    .grab{
+        min-width:60px;
+        padding:7px 8px;
+        height: 40px;
+    }
+}
