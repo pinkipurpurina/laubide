@@ -5,7 +5,7 @@ import { Container, Button, Modal } from 'react-bootstrap/'
 
 
 const MyVerticallyCenteredModal = () => {
-    const [show, setShow] = useState(false);
+    const [show2, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
@@ -14,7 +14,7 @@ const MyVerticallyCenteredModal = () => {
                 Botón demo
             </Button>
 
-            <Modal show={show} onHide={handleClose} size="lg" centered animation>
+            <Modal show={show2} onHide={handleClose} size="lg" centered animation>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
