@@ -41,88 +41,8 @@ code {
 .no-padding{
   padding: 0 !important;
 }
-.toolbar{
-  font-size:100%;
-  display: inline-block;
-  padding-top:15px;
-
-}
 .back{
   background-color: #242424;
-}
-.toolbar {
-  text-decoration: none;
-  color:#fff;
-  margin-left: 5em;
-}
-
-
-.toolbar .icon{
-  height:40px;
-  margin-bottom: 0.5em;
-  width:auto;
-  fill: var(--primary-color)
-}
-
-.brand{
-  display: inline-block;
-  background-color: #242424;
-  opacity: 0;
-  z-index:50;
-  border:1px solid #242424;
-  height: 0;
-  width: 0;
-  padding:20px 60px;
-  overflow: hidden;
-  border-radius: 250px;
-  margin-top:12vh;
-  transition: all 0.7s ease-in-out;
-}
-.show{
-  opacity: 0.9;
-  transform: translateX(100);
-  height: auto;
-  width: auto;
-}
-@keyframes show{
-  0%{opacity:0;height:0;width:0}
-  25%{opacity: 0.3;height:700px;width:40px}
-  50%{opacity: 0.6;height: 100px;width:60px}
-  100%{opacity: 0.9;height:auto;width:auto}
-}
-
-#nav p{
-  color:#fff;
-  font-weight: 500;
-  font-weight: bold;
-  position: sticky;
-}
-@media (max-width: 992px) {
-  #nav{
-    /* padding-top: 2em; */
-    background-color: #24242488 !important;
-  }
-
-  .toolbar:hover{
-    outline: 2px solid #242424a1;
-    background-color: #242424a1 !important;
-
-  }
-}
-@media (min-width: 992px) {
-  #nav{
-    /* padding-top: 2em; */
-    background-color: transparent !important;
-  }
-  .toolbar{
-    transition: all 0.4s ease-in-out !important;
-  }
-  .toolbar:hover{
-    border-bottom:1px solid #fff;
-    /* border-left:1px solid #747474;
-    border-right: 1px solid #747474; */
-    padding:0 10px;
-  }
 }
 
 /* Clases para el scrollbutton */
